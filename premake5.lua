@@ -1,4 +1,4 @@
--- Tools lib --
+-- GLFW lib --
 
 project "GLFW"
 	kind "StaticLib"
@@ -13,18 +13,17 @@ project "GLFW"
 		"src/**.h",
 		"src/**.c",
 
-		"include/GLFW/**.h"
+		"include/GLFW/**.h",
 	}
 	removefiles {
-		"src/**.vs*/**"
+		"src/**.vs*/**",
 	}
 
 	filter "system:Windows"
 		defines {
 			"_GLFW_WIN32",
-			"_CRT_SECURE_NO_WARNINGS"
+			"_CRT_SECURE_NO_WARNINGS",
 		}
-	}
 
 	filter "configurations:Debug"
 		runtime "Debug"
